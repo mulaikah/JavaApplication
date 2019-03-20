@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="https://fonts.googleapis.com/css?family=Viga"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="default.css">
+<title>ePortal | University Of Mulaikah</title>
+</head>
+
+<body>
+	<table class="header">
+		<tr>
+			<td align="center"><img src="images/banner6.png" width="800"
+				height="200"></td>
+				<td class="headertext"><p><strong>ePortal</strong></p>
+		</td>
+		</tr>
+	</table>
+<br />
+ 
+ <div id="info" align="center">
+ 
+<h1>Add New Student</h1>  
+<form action="SaveServlet" method="post">  
+<table>  
+<tr><td>Student Id:</td><td><input type="text" name="student_id"/></td></tr>  
+<tr><td>Password:</td><td><input type="text" name="student_pswd"/></td></tr>  
+<tr><td>First Name:</td><td><input type="text" name="firstname"/></td></tr> 
+<tr><td>Last Name:</td><td><input type="text" name="lastname"/></td></tr>  
+<tr><td>Address:</td><td><input type="text" name="address"/></td></tr>  
+<tr><td>Program:</td><td><input type="text" name="programme"/></td></tr>   
+<tr><td>Faculty:</td><td>  
+<select name="faculty" style="width:150px">  
+<option>Faculty of Languages and Communication </option>  
+<option>Faculty of Music and Performing Art </option>  
+<option>Faculty of Human Science </option>   
+<option>Faculty of Art,Computing and Creative Industry </option>
+<option>Faculty of Management and Economics </option>   
+<option>Faculty of Science and Mathematics </option>    
+</select>  
+</td></tr>    
+<tr><td>Email:</td><td><input type="email" name="email"/></td></tr>  
+<tr><td>Phone:</td><td><input type="text" name="phone"/></td></tr> 
+<tr><td colspan="2"><input type="submit" value="Save"/></td></tr>  
+
+</table>  
+</form>  
+  
+<br/>  
+<a href="lecturerLogged.jsp">Cancel</a>  
+  
+  </div>
+  <table class="footer">
+		<tr>
+			<td align="center">
+				<p class="legal">&copy; 20109 ePortal Student. All Rights
+					Reserved. | Designed by University Of Mulaikah</p>
+			</td>
+		</tr>
+	</table>
+</body>  
+</html>  

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from StudentDaoService WSDL service -->
+
+  <service name="StudentDao" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ePortalPackage"/>
+      <parameter name="wsdlServiceElement" value="StudentDaoService"/>
+      <parameter name="schemaQualified" value="http://ePortalPackage"/>
+      <parameter name="wsdlServicePort" value="StudentDao"/>
+      <parameter name="className" value="ePortalPackage.StudentDao"/>
+      <parameter name="wsdlPortType" value="StudentDao"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://ePortalPackage" xmlns:retNS="http://ePortalPackage" xmlns:rtns="http://ePortalPackage" name="getStudentId" qname="operNS:getStudentId" returnQName="retNS:getStudentIdReturn" returnType="rtns:StudentBean" soapAction="">
+        <parameter xmlns:pns="http://ePortalPackage" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:student_id" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ePortalPackage" xmlns:retNS="http://ePortalPackage" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="saveStudent" qname="operNS:saveStudent" returnQName="retNS:saveStudentReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://ePortalPackage" xmlns:tns="http://ePortalPackage" qname="pns:studentBean" type="tns:StudentBean"/>
+      </operation>
+      <operation xmlns:operNS="http://ePortalPackage" xmlns:retNS="http://ePortalPackage" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="deleteStudent" qname="operNS:deleteStudent" returnQName="retNS:deleteStudentReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://ePortalPackage" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:student_id" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://ePortalPackage" xmlns:retNS="http://ePortalPackage" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="updateStudent" qname="operNS:updateStudent" returnQName="retNS:updateStudentReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://ePortalPackage" xmlns:tns="http://ePortalPackage" qname="pns:studentBean" type="tns:StudentBean"/>
+      </operation>
+      <operation xmlns:operNS="http://ePortalPackage" xmlns:retNS="http://ePortalPackage" xmlns:rtns="http://ePortalPackage" xmlns:tns="http://ePortalPackage" name="getAllStudents" qname="operNS:getAllStudents" returnQName="retNS:getAllStudentsReturn" returnType="rtns:ArrayOf_xsd_anyType" returnItemQName="tns:item" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="getStudentId updateStudent saveStudent getAllStudents deleteStudent"/>
+
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;getStudentIdResponse" type="java:ePortalPackage.GetStudentIdResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;getAllStudents" type="java:ePortalPackage.GetAllStudents" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;getAllStudentsResponse" type="java:ePortalPackage.GetAllStudentsResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <arrayMapping xmlns:ns="http://ePortalPackage" xmlns:cmp-ns="http://www.w3.org/2001/XMLSchema" qname="ns:ArrayOf_xsd_anyType" type="java:java.lang.Object[]" innerType="cmp-ns:anyType" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;updateStudentResponse" type="java:ePortalPackage.UpdateStudentResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;saveStudent" type="java:ePortalPackage.SaveStudent" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;saveStudentResponse" type="java:ePortalPackage.SaveStudentResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;deleteStudentResponse" type="java:ePortalPackage.DeleteStudentResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:StudentBean" type="java:ePortalPackage.StudentBean" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;updateStudent" type="java:ePortalPackage.UpdateStudent" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;getStudentId" type="java:ePortalPackage.GetStudentId" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://ePortalPackage" qname="ns:&gt;deleteStudent" type="java:ePortalPackage.DeleteStudent" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

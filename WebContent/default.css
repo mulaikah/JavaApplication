@@ -1,0 +1,179 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	overflow: scroll;
+	background-color: #c4ala2;
+	width: 100%;
+}
+
+#page {
+	width: 920px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+.home {
+	border: solid 1px #00008B;
+	width: 800;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #ffffff;
+	position: inherit;
+	top: 0;
+	width: 800px;
+	z-index: 9999;
+	margin-left: auto;
+	margin-right: auto;
+	    padding-bottom: 15px;
+}
+
+.details {
+	width: 800px;
+	border: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5px;
+	line-height: 1.5em;
+	padding-bottom: 50px;
+}
+
+.courseDetails{
+		width: 800px;
+	border: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5px;
+	line-height: 1.5em;
+	padding-bottom: 50px;
+}
+
+.studentDetails{
+		width: 800px;
+	border: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5px;
+	line-height: 1.5em;
+	padding-bottom: 50px;
+}
+.contentcolor {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: white;
+	background-color: #2c552d;
+	width: 800px;
+	border: 0;
+	align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	width: 800;
+	border: 0;
+	cellspacing: 0;
+	cellpadding: 0;
+	align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.headertext {
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	font-size: 50px;
+	color: white;
+	transform: translate(-50%, -50%);
+}
+
+.header img {
+	width: 800;
+	height: 200;
+	border: 0;
+	cellspacing: 0;
+	cellpadding: 0;
+	align: center;
+}
+
+.header a {
+	cellspacing: 0;
+	cellpadding: 6;
+	align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 12px;
+}
+
+.usertype {
+	padding-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer {
+	width: 800px;
+	background-color: #2c552d;
+	align: center;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	size: 20px;
+}
+
+.footer p {
+	align: left;
+	color: white;
+	font-size: 12px;
+}
+
+.legal {
+	float: left;
+}
+
+.button {
+	float: center;
+	width: 300px;
+	padding: 12px 40px;
+	border-radius: 25px;
+	background-color: green;
+	color: white;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.button a {
+	float: center;
+	width: 300px;
+	padding: 12px 40px;
+	border-radius: 25px;
+	background-color: green;
+	color: white;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.active {
+	background-color: #FFFFFF;
+	color: white;
+}
+
+.navbar a {
+	float: left;
+	display: block;
+	color: #000080;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.navbar-centered a {
+	float: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

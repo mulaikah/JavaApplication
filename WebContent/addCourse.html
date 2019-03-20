@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="https://fonts.googleapis.com/css?family=Viga"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="default.css">
+<title>ePortal | University Of Mulaikah</title>
+</head>
+
+<body>
+	<table class="header">
+		<tr>
+			<td align="center"><img src="images/banner6.png" width="800"
+				height="200"></td>
+				<td class="headertext"><p><strong>ePortal</strong></p>
+		</td>
+		</tr>
+	</table>
+<br />
+ 
+ <div id="info" align="center">
+<h1>Add New Course</h1>  
+<form action="SaveCourseServlet" method="post">  
+<table>  
+<tr><td>Course Id:</td><td><input type="text" name="course_id"/></td></tr>  
+<tr><td>Course Name:</td><td><input type="text" name="course_name"/></td></tr> 
+<tr><td>Credit Hour:</td><td>
+<select name="credit_hour" style="width:150px">  
+<option>1</option>  
+<option>2</option>  
+<option>3</option>   
+<option>4</option>
+<option>5</option>   
+<option>6</option>   
+</select>    
+</td></tr>   
+<tr><td>Group:</td><td>
+<select name="classGroup" style="width:150px">  
+<option>A</option>  
+<option>B</option>  
+<option>C</option>   
+<option>D</option>
+</select>    
+</td></tr> 
+<tr><td colspan="2"><input type="submit" value="Save"/></td></tr>  
+</table>  
+</form>  
+ 
+ <br/> 
+<a href="lecturerLogged.jsp">Cancel</a>  
+   
+  
+ </div>
+  <table class="footer">
+		<tr>
+			<td align="center">
+				<p class="legal">&copy; 20109 ePortal Student. All Rights
+					Reserved. | Designed by University Of Mulaikah</p>
+			</td>
+		</tr>
+	</table>
+</body>  
+</html>  
